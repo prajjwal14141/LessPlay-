@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>lessPlay! - Mini Game Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  </head>
+
+  <body class="bg-[#0f0f0f] text-white min-h-screen flex flex-col items-center justify-center px-4">
+    <div class="particles"></div>
+    <div class="text-center fade-in">
+      <h1 class="text-5xl sm:text-6xl text-[#00ffcc] font-bold mb-4 animate-pulse">🎮 lessPlay!</h1>
+      <p class="text-xl sm:text-2xl text-gray-400 mb-10">Select a game and start playing!</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl w-full fade-in">
+      <a href="games/Tic-Tac-Toe/ttc.html" class="game-card">🟩 Tic Tac Toe</a>
+      <a href="games/Random-Brain-Teaser/bt.html" class="game-card">🌀 Brain-Teaser(*in develepment)</a>
+      <a href="games/Simon-Says/ss.html" class="game-card">🟥 Simon Says</a>
+      <a href="games/Whack-a-mole/whack.html" class="game-card">🐹 Whack-a-Mole</a>
+      <a href="games/wordle/wordle.html" class="game-card">🔤 Wordle</a>
+      <a href="games/Bouncing-balls/bb.html" class="game-card">🟠 Bouncing Balls</a>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const particleContainer = document.querySelector('.particles');
+        
+        // Create particles
+        for (let i = 0; i < 50; i++) {
+          const particle = document.createElement('div');
+          particle.classList.add('particle');
+          particle.style.width = `${Math.random() * 5 + 5}px`;
+          particle.style.height = particle.style.width;
+          particle.style.left = `${Math.random() * 100}%`;
+          particle.style.top = `${Math.random() * 100}%`;
+          particle.style.animationDuration = `${Math.random() * 3 + 2}s`;
+          particle.style.animationDelay = `${Math.random() * 2}s`;
+          particleContainer.appendChild(particle);
+        }
+      });
+    </script>
+    
+    <footer class="mt-16 text-sm text-gray-500 fade-in">
+      <p> More gamesNfun soon..</p>
+      
+      Built with 💻 + 🎮 by Kaju | lessPlay! © 2025
+      
+    </footer>
+  </body>
+</html>
