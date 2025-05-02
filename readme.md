@@ -16,6 +16,11 @@ LessPlay is a fun and interactive mini-game hub, featuring a collection of games
 - Vanilla JavaScript
 - Gsap animations
 
+## Deployment
+
+You can access the live version of the project at-->  less-play.vercel.app
+
+
 ## How to Run Locally
 
 1. Clone the repository:
